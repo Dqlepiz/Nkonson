@@ -7,7 +7,7 @@
 
 @theme-color: #666;
 @border-color: #ddd;
-@banner-height: 30em;
+@banner-height: 40em;
 
 // Bootstrap overrides
 @brand-primary: @theme-color;
@@ -29,10 +29,14 @@
 // Page layout
 
 body {
+  // background-image: url(../images/pics/background.jpg);
   font-family: 'Open Sans', 'Helvetica', sans-serif;
   font-size: 1.3em;
 }
 
+.stats{
+  background-color: rgba(120, 136, 128, 0.32);
+}
 
 //////////////////////////////////////////////////////
 // Schema styles
@@ -118,12 +122,23 @@ h4 { font-size: 1.6em; }
 
 //////////////////////////////////////////////////////
 // Header
+.navbar-inverse {
+    background-color: #222;
+    border-color: #080808;
+}
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
 
 nav.navbar {
-  background: #fff;
+  background: #b3b5b4;
   margin-bottom: 0px;
 
-  .navbar-brand {
+    .navbar-brand {
     color: #000;
     font-weight: 600;
     text-transform: uppercase;
@@ -139,7 +154,7 @@ nav.navbar {
   .navbar-form {
     .input-group {
       display: table;
-      width: 60%;
+      width: 90%;
 
       .form-control {
         width: 100%;
@@ -221,9 +236,11 @@ footer {
   .banner-area;
   
   h1 {
-    position: absolute;
+    position: relative;
     background-color: #fff;
-    padding: 0.5em;
+    padding: 0.3em;
+    top: 7em;
+    left: 13em;
     right: 0em;
     bottom: 1em;
   }
@@ -237,6 +254,10 @@ footer {
   margin-top: 1em;
   .legible-text;
 
+}
+
+.search_field {
+    width: 50%;
 }
 
 
@@ -395,3 +416,8 @@ h3.section-title {
   }
 }
 
+//////////////
+.containerh{
+    margin-left: 30px;
+    margin-right: 30px;
+}

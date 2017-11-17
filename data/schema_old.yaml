@@ -94,12 +94,6 @@
       label: 'Thumbnail image credit'
       hidden: true
 
-    # Scraping Time and Source
-    - name: scraped_time
-      label: 'Scraped Time'
-    - name: data_source
-      label: 'Data Source'
-
 
 #####################################################################
 # Entity: Person
@@ -129,12 +123,6 @@
       datatype: datetime
     - name: birth_town
       label: 'Birth town'
-    - name: hometown
-      label: 'Hometown'
-    - name: education
-      label: 'Education'
-    - name: religion
-      label: 'Religion'
     # TODO: do we really want these?
     - name: display_name
       label: 'Name used for display'
@@ -145,10 +133,7 @@
     - name: national_id
       label: ID number
     - name: passport_number
-      label: 'Passport number'
-    # Profile image
-    - name: image_url
-      label: 'Profile image'
+      label: Passport number
 
 
 #####################################################################

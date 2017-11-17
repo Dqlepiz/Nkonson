@@ -1,0 +1,33 @@
+
+entities:
+  person:
+  source_url_column: 'data_source'
+  columns:
+    - column: 'name'
+      property: 'name'
+    - column: 'image_url'
+      property: 'image_url'
+      skip_empty: true
+    - column: 'constituency'
+      property: 'constituency'
+    - column: 'region'
+      property: 'region'       
+    - column: 'hometown'
+      property: 'hometown'
+    - column: 'education'
+      property: 'education'
+    - column: 'date_birth'
+      property: 'date_birth'
+    - column: 'religion'
+      property: 'religion'
+    - column: 'email'
+      property: 'contact_email'
+      skip_empty: true
+    - column: 'scraped_time'
+      property: 'scraped_time'
+    - column: 'employment'
+      property: 'employment'
+    - column: 'origin_country'
+      property: 'origin_country'
+    - column: 'data_source'
+      property: 'data_source'

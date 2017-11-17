@@ -1,0 +1,38 @@
+
+  <div class="container-fluid">
+    <nav class="navbar navbar-inverse testnav" role="navigation">
+      <div class="navbar-header col-sm-2">
+        <a class="navbar-brand" href="{{url_for('base.index')}}">
+          <img src="{{ url_for('static', filename='images/logo.svg') }}">
+          {{APP_NAME}}
+        </a>
+      </div>
+      <div class="navbar-header col-sm-3">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Data</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="navbar-header col-sm-5">
+        <form class="navbar-form" role="search" action="{{url_for('browser.view')}}">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+            <input type="text" name="q" value="{{query_text}}"
+              class="form-control" placeholder="Search for politicians and companies in Ghana">
+            {% for schema, url, active, count in sidebar_schemata %}
+              {% if active %}
+                <input type="hidden" name="schema" value="{{schema.name}}">
+              {% endif %}
+            {% endfor %}
+          </div>
+        </form>
+    </div>
+    <div class="navbar-header col-sm-2">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>

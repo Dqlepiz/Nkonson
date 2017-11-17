@@ -1,0 +1,66 @@
+<div class="row">
+    <ul class="nav nav-tabs" id="tabs">
+      <li class="active"><a data-toggle="tab" href="#summary1"><h2>Search by country</h2></a></li>
+      <li><a data-toggle="tab" href="#summary2"><h2>Search by jurisdiction</h2></a></li>
+    </ul>
+    <div class="tab-content search_box search_content">
+        <div id="summary1" class="tab-pane fade">
+            <form class="navbar-form" role="search" action="{{url_for('browser.view')}}">
+              <div class="input-group">
+                <input name="utf8" type="hidden" value="✓">
+                <input type="text" name="q" id="q1" placeholder="Enter any name here..." class="search_field" autocomplete="off">
+                <div id="c-cont" style="display: inline-block;">
+                    <select name="c" id="c"><option value="">All countries</option>
+                    <option value="BFA">Burkina Faso</option>
+                    <option value="CPV">Cape Verde</option>
+                    <option value="CIV">Côte d'Ivoire</option>
+                    <option value="GMB">Gambia</option>
+                    <option value="GHA">Ghana</option>
+                    <option value="GIN">Guinea</option>
+                    <option value="GNB">Guinea-Bissau</option>
+                    <option value="MLI">Mali</option>
+                    <option value="NER">Niger</option>
+                    <option value="NGA">Nigeria</option>
+                    <option value="SEN">Senegal</option>
+                    <option value="SLE">Sierra Leone</option>
+                    <option value="TGO">Togo</option>
+                    <option value="XXX">Not identified</option></select>
+                    <i class="fa fa-caret-down"></i>
+                </div>
+
+                <input type="hidden" name="e" id="e">
+                <input type="submit" name="commit" value="Search" disabled="disabled">
+                <div class="tip">To search, enter a term in the box. Leave it blank and select a country or jurisdiction to see a full list of names.</div>
+              </div>
+          </form>
+        </div>
+        <div id="summary2" class="tab-pane fade">
+            <form class="navbar-form" role="search" action="{{url_for('browser.view')}}">
+                <div class="input-group">
+                    <input name="utf8" type="hidden" value="✓">
+                    <input type="text" name="q" id="q2" placeholder="Enter any name here" class="search_field" autocomplete="off">
+                    <div class="select_cont" id="j-cont" style="display: inline-block;">
+                        <select name="j" id="j"><option value="">All jurisdictions</option>
+                        <option value="RAK">Ras Al Khaimah</option>
+                        <option value="SAM">Samoa</option>
+                        <option value="SEY">Seychelles</option>
+                        <option value="SGP">Singapore</option>
+                        <option value="STLU">St. Lucia</option>
+                        <option value="THAIL">Thailand</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="USA">United States Of America</option>
+                        <option value="UY">Uruguay</option>
+                        <option value="VANU">Vanuatu</option>
+                        <option value="WYO">Wyoming</option>
+                        <option value="XXX">Undetermined</option></select>
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+
+                    <input type="hidden" name="e" id="e">
+                    <input type="submit" name="commit" value="Search" disabled="disabled">
+                    <div class="tip">To search, enter a term in the box. Leave it blank and select a country or jurisdiction to see a full list of names.</div>
+              </div>
+          </form>
+        </div>
+    </div> 
+</div>

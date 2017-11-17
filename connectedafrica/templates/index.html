@@ -6,42 +6,41 @@
 {% endblock %}
 
 {% block banner %}
-  <div class="home-banner">
-    <div class="container">
-      <h1>
-        {{APP_NAME}}
-        <small>{{APP_SLOGAN}}</small>
-      </h1>
-    </div>
-  </div>
-{% endblock %}
 
-{% macro top_list(res, title) %}
-  <h4>{{title}}</h4>
-  <table class="table table-condensed">
-    {% for ent in res %}
-      <tr>
-        <td>{{ entity_link(ent) }}</td>
-        <td class="num">{{ ent.degree }}</td>
-      </tr>
-    {% endfor %}
-    <tr>
-        <td colspan="2" class="num">...and {{res.data.total - res.data.limit}} more</td>
-    </tr>
-  </table>
-{% endmacro %}
 
-{% block content %}
-  <p class="home-teaser">
-    {{APP_NAME}} provides users with a tool to investigate the connections that exist between the private and public spheres in South Africa. Specifically, it provides a unique insight into the financial connectivities that can, and often do, determine how, when, and why money is expended by government. 
-    <a href='{{url_for('base.page', path='about')}}'>Read more...</a>
-  </p>
   <div class="row">
-    <div class="col-sm-6">
-      {{ top_list(people, 'Connected politicians')}}
+    <div class="col-md-5 hidden-xs hidden-sm">
+      {% include 'westafricamap.html' %}
+      <div class="hidden-xs hidden-sm">
+        <h3 id="title">All Countries</h3>
+        <hr>
+        <div id="text">Click on a country to find out more about its whistleblower laws, procedures and cases</div>
+        <br>
+        <div>
+          {% include 'top_list.html' %}
+        </div>
+      </div>
     </div>
-    <div class="col-sm-6">
-      {{ top_list(orgs, 'Connected companies')}}
+    <div class="col-md-7">
+        <p class="home-teaser">
+          {{APP_NAME}} provides users with a tool to investigate the connections that exist between the private and public spheres in West Africa. Specifically, it provides a unique insight into the financial connectivities that can, and often do, determine how, when, and why money is expended by government. 
+          <a href='{{url_for('base.page', path='about')}}'>Read more...</a>
+        </p>
+        <div class="home-banner">
+          <div class="container">
+            <h1>
+              {{APP_NAME}}
+              <small>{{APP_SLOGAN}}</small>
+            </h1>
+          </div>
+
+        </div>
+        <div>
+            {% include 'search_form.html' %}
+        </div>
     </div>
   </div>
+
+
+
 {% endblock %}

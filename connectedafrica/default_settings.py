@@ -8,15 +8,18 @@ FLATPAGES_EXTENSION = '.md'
 
 CACHE_TYPE = 'simple'
 
-APP_NAME = 'Siyazana'
+APP_NAME = 'Kenejeya'
 APP_SLOGAN = 'We know each other'
 
 # Force HTTPS here:
 PREFERRED_URL_SCHEME = os.getenv('GRANO_URL_SCHEME', 'http')
 
-GRANO_HOST = os.environ.get('GRANO_HOST', 'http://beta.grano.cc/')
+# GRANO_HOST = os.environ.get('GRANO_HOST', 'http://beta.grano.cc/')
+GRANO_HOST = os.environ.get('GRANO_HOST', 'http://127.0.0.1:5000/')
+
 GRANO_APIKEY = os.environ.get('GRANO_APIKEY')
-GRANO_PROJECT = os.environ.get('GRANO_PROJECT', 'southafrica')
+# GRANO_PROJECT = os.environ.get('GRANO_PROJECT', 'southafrica')
+GRANO_PROJECT = os.environ.get('GRANO_PROJECT', 'Siyazana-0001')
 
 WINDEEDS_USER = os.environ.get('WINDEEDS_USER')
 WINDEEDS_PASS = os.environ.get('WINDEEDS_PASS')

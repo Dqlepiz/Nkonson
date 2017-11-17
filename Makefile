@@ -1,10 +1,14 @@
+
+export GRANO_HOST=http://127.0.0.1:5000
+export GRANO_PROJECT=Siyazana-0001
+export GRANO_APIKEY=iod3omqi9avjlvx
+
+
 load: loadschema loadgdocs loadjse loadpa loadwindeeds
 
 install:
 	bower install
 
-web:
-	python connectedafrica/manage.py runserver -p 5001
 
 loadschema:
 	@granoloader --create-project schema data/schema.yaml
