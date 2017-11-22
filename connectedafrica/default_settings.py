@@ -8,7 +8,7 @@ FLATPAGES_EXTENSION = '.md'
 
 CACHE_TYPE = 'simple'
 
-APP_NAME = 'Kenejeya'
+APP_NAME = 'Nkonson'
 APP_SLOGAN = 'We know each other'
 
 # Force HTTPS here:
